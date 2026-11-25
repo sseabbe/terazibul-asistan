@@ -1,0 +1,92 @@
+{
+  "kuyumcu": {
+    "category": "kuyumcu",
+    "critical_fields": ["capacity", "readability"],
+    "questions": {
+      "capacity": "Tek seferde tartacağınız en ağır parça yaklaşık kaç gram?",
+      "readability": "Hangi okunabilirlik/hassasiyet gerekiyor? Gram olarak biliyorsanız yazabilirsiniz. Bilmiyorsanız ne tartacağınızı ve ne kadar hassas ölçmeniz gerektiğini söyleyin."
+    },
+    "important_attributes": [
+      "Altın alım-satım, ayar ölçümü ve günlük gram tartımı farklı cihaz gruplarına gider.",
+      "Tartılacak madde (has altın, takı, hurda) ve istenen okuma netleşmeden model önerilmez."
+    ]
+  },
+  "laboratuvar": {
+    "important_attributes": [
+      "Analitik / yarı analitik / hassas terazide okuma değeri (mg, g) seçimi belirler.",
+      "Maksimum yükleme (kapasite) ve kalibrasyon tipi (iç/dış) laboratuvar kullanımında kritiktir.",
+      "Numune kütle aralığı bilinmeden ürün listesi açılmaz."
+    ]
+  },
+  "nem-tayin": {
+    "category": "laboratuvar",
+    "subcategory": "nem-tayin",
+    "purpose_cues": ["nem tayin", "nemini", "nemi", "rutubet", "moisture", "numune nem"],
+    "aliases": ["moisture analyzer", "nem olcer"],
+    "conflicts": ["test-ve-olcum", "perakende", "aksesuar", "endustriyel", "kuyumcu"],
+    "relevant_attributes": ["numune tipi", "kurutma sicakligi", "numune miktari"],
+    "critical_attributes": ["numune tipi", "kurutma sicakligi"],
+    "critical_fields": ["sample", "temperature"],
+    "questions": {
+      "sample": "Hangi malzemeden numune tartılacak?",
+      "temperature": "Prosedürde belirli bir kurutma sıcaklığı var mı?"
+    },
+    "important_attributes": [
+      "Nem tayin cihazında numune tipi ve prosedürdeki kurutma sıcaklığı model ayrımında belirleyicidir.",
+      "Kapasite, numune miktarı bilinmeden erken liste açılmaz."
+    ]
+  },
+  "load-cell": {
+    "category": "endustriyel",
+    "subcategory": "load-cell",
+    "purpose_cues": ["load cell", "yuk hucre", "kuvvet sensor", "silo tart"],
+    "aliases": ["loadcell", "yuk hucresi"],
+    "conflicts": ["aksesuar", "test-ve-olcum", "laboratuvar", "perakende", "kuyumcu"],
+    "relevant_attributes": ["toplam yuk", "hucre sayisi", "ortam", "gosterge uyumu"],
+    "critical_attributes": ["toplam yuk", "hucre sayisi"],
+    "critical_fields": ["total_load", "cell_count"],
+    "questions": {
+      "total_load": "Sistemin taşıyacağı toplam yük ne kadar?",
+      "cell_count": "Kaç adet yük hücresi bağlanacak?"
+    },
+    "important_attributes": [
+      "Yük hücresinde toplam yük, hücre adedi ve ortam (tank, silo, platform) seçimi belirler.",
+      "Gösterge veya çıkış uyumu gerekirse ayrıca netleşir; kg tek başına endüstriyel terazi demek değildir."
+    ]
+  },
+  "barkodlu-teraziler": {
+    "category": "perakende",
+    "subcategory": "barkodlu-teraziler",
+    "purpose_cues": ["barkod", "etiket bas", "plu", "fiyat etiket"],
+    "aliases": ["barkodlu terazi", "etiketli terazi"],
+    "conflicts": ["laboratuvar", "endustriyel", "aksesuar", "kuyumcu", "test-ve-olcum"],
+    "relevant_attributes": ["kapasite", "etiket", "plu", "entegrasyon"],
+    "critical_attributes": ["kapasite", "etiket"],
+    "critical_fields": ["capacity", "label"],
+    "questions": {
+      "capacity": "En fazla kaç kilogram tartmanız gerekiyor?",
+      "label": "Etiket basımı veya kasa entegrasyonu da gerekli mi?"
+    },
+    "important_attributes": [
+      "Barkodlu terazide etiket/barkod ihtiyacı ve kapasite belirleyicidir.",
+      "PLU veya kasa entegrasyonu gerekirse ayrıca sorulur. Kasap veya market kelimesi tek başına barkod grubu açmaz."
+    ]
+  },
+  "lab-analitik": {
+    "category": "laboratuvar",
+    "subcategory": "lab-analitik",
+    "readability_nano": 100000,
+    "retains_lab_type": true,
+    "relevant_attributes": ["kapasite", "okunabilirlik", "kalibrasyon"],
+    "critical_attributes": ["kapasite", "okunabilirlik"],
+    "critical_fields": ["capacity", "readability"],
+    "questions": {
+      "capacity": "Tek seferde tartacağınız en ağır numune yaklaşık kaç gram?",
+      "readability": "Hangi okunabilirlik/hassasiyet gerekiyor? Gram olarak biliyorsanız yazabilirsiniz. Bilmiyorsanız ne tartacağınızı ve ne kadar hassas ölçmeniz gerektiğini söyleyin."
+    },
+    "important_attributes": [
+      "0,0001 g (0,1 mg) okunabilirlik analitik terazi sinyalidir; yarı analitik grubuna gitmez.",
+      "Kapasite ve kalibrasyon tipi netleşmeden liste açılmaz."
+    ]
+  }
+}

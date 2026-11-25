@@ -1,0 +1,344 @@
+:root {
+  --av2-ink: #0E0D22;
+  --av2-muted: rgba(14, 13, 34, 0.56);
+  --av2-accent: #4B34F6;
+  --av2-soft: #DDD9FF;
+  --av2-line: rgba(14, 13, 34, 0.08);
+  --av2-bg: #F6F5FA;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--av2-bg);
+  color: var(--av2-ink);
+  font-family: "Pliant", sans-serif;
+}
+
+.av2-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.av2-panel {
+  width: min(460px, 100%);
+  height: min(760px, calc(100vh - 64px));
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 16px 48px rgba(14, 13, 34, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.av2-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 20px 20px 12px;
+}
+
+.av2-head h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.av2-head p {
+  margin: 2px 0 0;
+  color: var(--av2-muted);
+  font-size: 13px;
+}
+
+.av2-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+}
+
+.av2-log {
+  flex: 1;
+  overflow: auto;
+  padding: 8px 16px 16px;
+}
+
+.av2-row { display: flex; margin: 8px 0; }
+.av2-row--user { justify-content: flex-end; }
+.av2-bubble {
+  max-width: 100%;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: var(--av2-bg);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.av2-row--user .av2-bubble {
+  background: var(--av2-soft);
+}
+.av2-bubble p { margin: 0; }
+.av2-bubble p + p { margin-top: 4px; }
+
+.av2-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 8px 0 12px;
+}
+
+.av2-card {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid var(--av2-line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.av2-card img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: var(--av2-bg);
+}
+
+.av2-card h2 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.av2-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--av2-muted);
+}
+
+.av2-card-link {
+  display: inline-flex;
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--av2-accent);
+}
+
+.product-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--av2-bg);
+  font: inherit;
+  font-size: 12px;
+}
+
+.product-badge--renewed img,
+.product-badge--renewed svg,
+.product-badge--renewed::before,
+.product-badge--renewed::after {
+  display: none !important;
+}
+
+.product-badge-label { font-size: 12px; font-weight: 500; }
+
+.av2-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+
+.av2-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  height: 48px;
+  padding: 0 12px 0 18px;
+  gap: 10px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-family: "Pliant", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.av2-action--primary {
+  background: var(--av2-accent);
+  color: #fff;
+}
+
+.av2-action--wa {
+  height: 48px;
+  min-height: 48px;
+  padding: 8px 8px 8px 24px;
+  gap: 14px;
+  background: #00BC39;
+  color: #FFFFFF;
+  border: 1px solid #00BC39;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+
+.av2-action--wa::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  background: url("../../images/icons/button-live-support-white.svg?v=tb351") center / 32px 32px no-repeat;
+}
+
+.av2-action--secondary {
+  background: #fff;
+  color: var(--av2-ink);
+  border-color: rgba(14, 13, 34, 0.16);
+}
+
+.av2-action img {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+}
+
+.av2-phone {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+
+.av2-phone input {
+  flex: 1 1 160px;
+  min-width: 0;
+  height: 56px;
+  box-sizing: border-box;
+  border: 1px solid rgba(14, 13, 34, 0.08);
+  border-radius: 16px;
+  padding: 0 16px;
+  font: inherit;
+}
+
+.av2-phone button {
+  flex: 0 0 auto;
+  height: 48px;
+  width: fit-content;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--av2-accent);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.av2-phone p {
+  flex: 1 0 100%;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.av2-more {
+  display: inline-flex;
+  width: fit-content;
+  margin: 4px 0 12px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--av2-accent);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.av2-debug {
+  margin: 6px 0 12px;
+  border: 1px dashed var(--av2-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.av2-debug summary {
+  padding: 8px 10px;
+  cursor: pointer;
+  color: var(--av2-muted);
+  font-size: 12px;
+}
+
+.av2-debug pre {
+  margin: 0;
+  padding: 0 10px 10px;
+  overflow: auto;
+  max-height: 220px;
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.av2-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--av2-line);
+}
+
+.av2-form textarea {
+  flex: 1;
+  min-height: 48px;
+  max-height: 120px;
+  resize: none;
+  border: 1px solid var(--av2-line);
+  border-radius: 16px;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 15px;
+}
+
+.av2-form button {
+  height: 48px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--av2-accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.av2-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+@media (max-width: 640px) {
+  .av2-page { padding: 0; }
+  .av2-panel {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+}

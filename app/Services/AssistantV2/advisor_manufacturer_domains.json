@@ -1,0 +1,45 @@
+{
+  "brands": {
+    "Axis": {
+      "catalog_slugs": ["axis"],
+      "aliases": ["axis"],
+      "domains": ["axis.pl"]
+    },
+    "Ohaus": {
+      "catalog_slugs": ["ohaus"],
+      "aliases": ["ohaus"],
+      "domains": ["ohaus.com"]
+    },
+    "Radwag": {
+      "catalog_slugs": ["radwag"],
+      "aliases": ["radwag"],
+      "domains": ["radwag.com"]
+    },
+    "Shimadzu": {
+      "catalog_slugs": ["shimadzu"],
+      "aliases": ["shimadzu"],
+      "domains": ["shimadzu.com"]
+    },
+    "Sartorius": {
+      "catalog_slugs": ["sartorius"],
+      "aliases": ["sartorius"],
+      "domains": ["sartorius.com"]
+    },
+    "Kern": {
+      "catalog_slugs": ["kern", "kern-sohn"],
+      "aliases": ["kern", "kern sohn", "kern & sohn"],
+      "domains": ["kern-sohn.com"]
+    },
+    "Mettler Toledo": {
+      "catalog_slugs": ["mettler-toledo"],
+      "aliases": ["mettler toledo", "mettler"],
+      "domains": ["mt.com"]
+    },
+    "Precisa": {
+      "catalog_slugs": ["precisa"],
+      "aliases": ["precisa"],
+      "domains": ["precisa.com"]
+    }
+  },
+  "notes": "Domains verified via Terazibul hata kodları resmî kaynak listesi ve ürün import source_url (axis.pl, radwag.com). CAS omitted: no verified manufacturer URL in site data."
+}
